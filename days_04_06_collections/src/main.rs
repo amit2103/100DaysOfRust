@@ -69,6 +69,29 @@ PageMaker including versions of Lorem Ipsum";
     for (word, num) in &top_five {
         println!("Word '{}' has been found {} times ", word, num);
     }
+
+    // JSON example in Rust
+    // take a HashMap and convert it into a JSON
+
+    json_example();
+}
+
+fn json_example () {
+    let mut people = HashMap::new();
+    people.insert("Amit".to_string(), "Coder".to_string());
+    people.insert("Bob".to_string(), "Shooter".to_string());
+
+    let json = serde_json::to_string(&people).unwrap();
+
+    println!("Json for map is {} ", json);
+
+    type Dictionary = HashMap<String, String>;
+    let p : Dictionary  = serde_json::from_str(&json).unwrap();
+
+    //Got it deserialized now lets try to see if the key 'Amit' has its associated value
+    println!("Amit is a {} ", p.get("Amit").unwrap());
+
+
 }
 
 struct Employee<'a> {
