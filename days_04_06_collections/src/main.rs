@@ -2,6 +2,8 @@ use counter::Counter;
 use std::collections::HashMap;
 
 fn main() {
+    // 1 Tuple usage in Rust
+
     let emp = ("Bob", 35);
     println!("Employee {}'s salary is {}", emp.0, emp.1);
 
@@ -46,6 +48,9 @@ fn main() {
     for (name, profession) in &users {
         println!("{}: \"{}\"", name, profession);
     }
+
+    //3 .Using  Counters in rust, Rust counters are heavily inspired by Python Counters and
+    // can be used by including the counter crate in the Cargo.toml file
 
     let words = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
 the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
